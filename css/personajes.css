@@ -140,6 +140,11 @@
 /* Ajuste Responsivo Móvil */
 @media (max-width: 900px) {
 
+    .titulo-pixeleado {
+
+    font-size: 1.8rem;
+}
+
 
     .grilla-personajes {
         grid-template-columns: 1fr;

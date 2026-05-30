@@ -1,0 +1,101 @@
+/* Configuración de la Sección */
+.pixel-alternating-grid {
+    background-color: #fcdd2c; /* Amarillo */
+    padding: 10px;
+    display: block;
+    padding-inline-start: 10px;
+    font-family: 'Press Start 2P', cursive;
+    border-bottom: 6px solid #5D4037; /* Detalle Café */
+}
+
+/* Título de la Sección */
+.grid-main-title {
+    text-align: center;
+    color: #C62828; /* Rojo */
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 0px #5D4037;
+}
+
+/* Contenedor de filas */
+.alternating-container {
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 60px; /* Espacio amplio entre filas */
+}
+
+/* Estructura Base de cada Fila */
+.alt-row {
+    display: flex;
+   
+    gap: 40px;
+}
+
+/* --- MAGIA CSS: Intercambio automático de posición --- */
+/* Aplica a las filas pares (2, 4, 6) invirtiendo el orden de las columnas */
+.alt-row:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Columnas equidistantes */
+.alt-col-img,
+.alt-col-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Marcos de las imágenes */
+.img-pixel-wrapper {
+    border: 6px solid #000;
+    background: #000;
+    line-height: 0;
+    overflow: hidden;
+}
+
+/* Variaciones de Sombras Sólidas */
+.border-rojo { box-shadow: 8px 8px 0px #C62828; }
+.border-verde { box-shadow: 8px 8px 0px #2E7D32; }
+.border-cafe { box-shadow: 8px 8px 0px #5D4037; }
+
+.img-pixel-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    image-rendering: pixelated;
+}
+
+/* Estilos de Texto */
+.alt-col-text h3 {
+    font-size: 1.8rem;
+    color: #2E7D32; /* Café */
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+/* Un sutil cambio de color para los títulos de las filas que se invierten */
+.alt-row:nth-child(even) .alt-col-text h3 {
+    color: #e60404; /* Verde para las filas pares */
+}
+
+.alt-col-text p {
+    color: #5D4037;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Ajustes Responsivos para Teléfonos */
+@media (max-width: 768px) {
+    .alternating-container {
+        gap: 40px;
+    }
+
+    .alt-row,
+    .alt-row:nth-child(even) {
+        flex-direction: column; /* En móvil todas se apilan igual: Imagen ARRIBA, Texto ABAJO */
+        text-align: center;
+        gap: 20px;
+    }
+}

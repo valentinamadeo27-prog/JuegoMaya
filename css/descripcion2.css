@@ -1,0 +1,284 @@
+/* Configuración de la Sección */
+.pixel-section {
+    display: flex;
+    flex-wrap: wrap; /* Permite que sea responsivo */
+    background-color: #ffdd1f; /* Amarillo */
+    padding: 40px;
+    gap: 20px;
+    align-items: center;
+    border-bottom: 6px solid #5D4037; /* Detalle Café */
+}
+
+.column {
+    flex: 1;
+    min-width: 300px; /* Tamaño mínimo antes de apilarse */
+}
+
+/* Estilo del Video */
+.video-frame {
+    border: 4px solid #5D4037; /* Borde Café */
+    box-shadow: 8px 8px 0px #C62828; /* Sombra sólida Roja */
+    line-height: 0;
+    overflow: hidden;
+    background: #000;
+}
+
+.video-frame video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Estilo del Texto */
+.text-col {
+   font-family: 'Press Start 2P', cursive;
+    color: #5D4037; /* Café */
+    padding: 20px;
+}
+
+.text-col h2 {
+    font-size: 2.rem;
+    color: #C62828; /* Rojo */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.text-col p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #7e5431; /* Verde para el cuerpo de texto */
+}
+
+/* Botón con estilo Pixel */
+.pixel-btn {
+     font-family: 'Press Start 2P', cursive;
+    background-color: #2E7D32; /* Verde */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px #5D4037;
+    transition: transform 0.1s;
+}
+
+.pixel-btn:hover {
+    background-color: #C62828; /* Rojo al pasar el mouse */
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #5D4037;
+}
+
+/* Ajuste para móviles */
+@media (max-width: 768px) {
+    .pixel-section {
+        padding: 20px;
+    }
+    
+    .text-col {
+        text-align: center;
+    }
+}
+/* Sección General */
+.pixel-info-section {
+    background-color: #ffdd1f; /* Amarillo */
+    padding: 60px 20px;
+    font-family: 'Press Start 2P', cursive;
+    border-bottom: 6px solid #5D4037; /* Detalle Café */
+}
+
+/* Título Superior */
+.section-main-title {
+    text-align: center;
+    color: #C62828; /* Rojo */
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 0px #5D4037; /* Sombra café al texto */
+}
+
+/* Contenedor de las dos columnas */
+.two-columns-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap; /* Hace que sea responsivo */
+    gap: 40px;
+    align-items: center;
+}
+
+/* Distribución de columnas (50% cada una si hay espacio) */
+.info-column-text, 
+.info-column-img {
+    flex: 1;
+    min-width: 300px; /* Se apilan en pantallas pequeñas */
+}
+
+
+/* Columna de Texto */
+.info-column-text h3 {
+    color: #5D4037; /* Verde */
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.info-column-text p {
+    color: #5D4037; /* Café */
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Botón de acción estilo enlace */
+.pixel-link-btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #C62828; /* Rojo */
+    color: #FFF;
+    padding: 12px 24px;
+    border: 3px solid #000;
+    box-shadow: 4px 4px 0px #5D4037;
+    font-weight: bold;
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.pixel-link-btn:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #5D4037;
+    background-color: #2E7D32; /* Cambia a verde al pasar el mouse */
+}
+
+/* Columna de Imagen con Marco */
+.pixel-image-frame {
+    border: 6px solid #5D4037; /* Borde Café */
+    box-shadow: 10px 10px 0px #2E7D32; /* Sombra sólida Verde */
+    background: #000;
+    line-height: 0;
+    overflow: hidden;
+}
+
+.pixel-image-frame:hover{
+
+    transition: 1.1;
+}
+
+.pixel-image-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+    image-rendering: pixelated; /* Evita el suavizado si usas arte de baja resolución */
+}
+
+/* Ajustes para Pantallas Celulares */
+@media (max-width: 768px) {
+    .section-main-title {
+        font-size: 2rem;
+    }
+    
+    .two-columns-container {
+        flex-direction: column-reverse; /* Hace que en móvil la imagen quede ARRIBA del texto */
+        gap: 30px;
+    }
+
+    .info-column-text {
+        text-align: center;
+    }
+}
+/* Sección General */
+.pixel-reverse-section {
+    background-color: hsl(51, 100%, 56%); /* Amarillo */
+    padding: 60px 20px;
+    font-family: 'Press Start 2P', cursive;
+    border-bottom: 6px solid #5D4037; /* Detalle Café */
+}
+
+/* Título Superior */
+.reverse-main-title {
+    text-align: center;
+    color: #C62828; /* Verde para variar los títulos */
+    font-size: 2rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 0px #000; /* Sombra negra sólida */
+}
+
+/* Contenedor de las dos columnas */
+.reverse-columns-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap; /* Responsivo */
+    gap: 40px;
+    align-items: center;
+}
+
+/* Distribución de columnas */
+.reverse-column-img, 
+.reverse-column-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Columna de Imagen con Marco */
+.pixel-frame-left {
+    border: 6px solid #000; /* Borde Negro */
+    box-shadow: 10px 10px 0px #C62828; /* Sombra sólida Roja */
+    background: #000;
+    line-height: 0;
+    overflow: hidden;
+}
+
+.pixel-frame-left img {
+    width: 100%;
+    height: auto;
+    display: block;
+    image-rendering: pixelated; /* Mantiene los píxeles definidos */
+}
+
+/* Columna de Texto */
+.reverse-column-text h3 {
+    color: #C62828; /* Rojo */
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.reverse-column-text p {
+    color: #5D4037; /* Café */
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Botón Verde */
+.pixel-action-btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #2E7D32; /* Verde */
+    color: #FFF;
+    padding: 12px 24px;
+    border: 3px solid #000;
+    box-shadow: 4px 4px 0px #5D4037;
+    font-weight: bold;
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.pixel-action-btn:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #5D4037;
+    background-color: #C62828; /* Cambia a rojo al pasar el mouse */
+}
+
+/* Ajustes para Pantallas Celulares */
+@media (max-width: 768px) {
+    .reverse-main-title {
+        font-size: 2rem;
+    }
+
+    .reverse-columns-container {
+        flex-direction: column; /* En móvil la imagen se queda arriba por defecto */
+        gap: 30px;
+    }
+
+    .reverse-column-text {
+        text-align: center;
+    }
+}

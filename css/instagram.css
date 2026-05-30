@@ -1,0 +1,28 @@
+.btn-inst {
+    position:fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 90px;
+    background-color: #6600db ;
+    color: #ffffff;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px black;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: ease all 0.3s;
+    opacity: 0.5;
+}
+.btn-inst:hover{
+    background-color: #30007c;
+    transform: scale(1.1);
+    opacity: 1;
+}
+.btn-inst img{
+    width: 55x;
+    height: 55px;
+}
